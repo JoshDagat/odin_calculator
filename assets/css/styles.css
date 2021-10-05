@@ -25,9 +25,10 @@ button {
   margin-bottom: 1em;
   border-radius: 5px;
   display: flex;
-  align-items: center;
-  padding: 0 1em;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0.5em 1em;
+  justify-content: center;
 }
 
 .calculator__numpad {
@@ -41,6 +42,15 @@ button {
   "num4 num5 num6 plus"
   "num1 num2 num3 equals"
   "num0 num0 num-dot equals"
+}
+
+.display__current {
+  font-size: 2em;
+}
+
+.display__history {
+  font-size: 0.8em;
+  color: rgba(60,60,60, 1)
 }
 
 .opr-percent { grid-area: percent; }
@@ -58,7 +68,7 @@ button {
 .num5 { grid-area: num5; }
 .num6 { grid-area: num6; }
 .num1 { grid-area: num1; }
-.num2 { grid-area: num2; }
+.num2 { grid-area: num2; }  
 .num3 { grid-area: num3; }
 .num0 { grid-area: num0; }
 .num-dot { grid-area: num-dot; }

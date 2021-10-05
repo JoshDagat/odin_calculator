@@ -11,19 +11,20 @@
 <body>
   <div class="calculator__body">
     <div class="calculator__display">
-      <span>80085</span>
+        <p class="display__history"></p>
+        <p class="display__current">0</p>
     </div>
     <!--  -->
     <div class="calculator__numpad">
     
-      <button class = "operator opr-percent" value = "percent">%</button>
-      <button class = "operator opr-clear" value = "clear">C</button>
-      <button class = "operator opr-clear-entry" value = "clear-entry">CE</button>
-      <button class = "operator opr-del" value = "del">del</button>
+      <button class = "opr opr-percent" value = "percent">%</button>
+      <button class = "opr opr-clear" value = "clear">C</button>
+      <button class = "opr opr-clear-entry" value = "clear-entry">CE</button>
+      <button class = "opr opr-del" value = "del">del</button>
       <button class = "switch"> on / off</button>
-      <button class = 'operator opr-divide' value = "divide">/</button>
-      <button class = 'operator opr-multiply' value = "multiply">*</button>
-      <button class = 'operator opr-sub' value = "subtract">-</button>
+      <button class = 'opr main opr-divide' value = "&#247;">/</button>
+      <button class = 'opr main opr-multiply' value = "*">*</button>
+      <button class = 'opr main opr-sub' value = "-">-</button>
       <button class = 'number num7' value = "7">7</button>
       <button class = 'number num8' value = "8">8</button>
       <button class = 'number num9' value = "9">9</button>
@@ -33,11 +34,12 @@
       <button class = 'number num1' value = "1">1</button>
       <button class = 'number num2' value = "2">2</button>
       <button class = 'number num3' value = "3">3</button>
-      <button class = 'number num0' value = "0">0</button>
-      <button class = 'number num-dot' value = ".">.</button>
-      <button class = 'operator opr-add' value = "add">+</button>
-      <button class = 'operator opr-equals' value = "equals">=</button>
+      <button class = 'num0' value = "0">0</button>
+      <button class = 'num-dot' value = ".">.</button>
+      <button class = 'opr main opr-add' value = "+">+</button>
+      <button class = 'opr opr-equals' value = "=">=</button>
     </div>
   </div>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>
