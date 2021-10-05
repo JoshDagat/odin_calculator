@@ -1,0 +1,66 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 1em;
+  min-width: 40px
+}
+
+.calculator__display {
+  min-height: 50px;
+  background-color: rgba(121, 121, 0, 0.1);
+  margin-bottom: 1em;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+  justify-content: flex-end;
+}
+
+.calculator__numpad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+  grid-template-areas:
+  "percent clear clear-entry del"
+  "switch divide multiply sub"
+  "num7 num8 num9 plus"
+  "num4 num5 num6 plus"
+  "num1 num2 num3 equals"
+  "num0 num0 num-dot equals"
+}
+
+.opr-percent { grid-area: percent; }
+.opr-clear { grid-area: clear; }
+.opr-clear-entry { grid-area: clear-entry; }
+.opr-del { grid-area: del; }
+.switch { grid-area: switch; }
+.opr-divide { grid-area: divide; }
+.opr-multiply { grid-area: multiply; }
+.opr-sub { grid-area: sub; }
+.num7 { grid-area: num7; }
+.num8 { grid-area: num8; }
+.num9 { grid-area: num9; }
+.num4 { grid-area: num4; }
+.num5 { grid-area: num5; }
+.num6 { grid-area: num6; }
+.num1 { grid-area: num1; }
+.num2 { grid-area: num2; }
+.num3 { grid-area: num3; }
+.num0 { grid-area: num0; }
+.num-dot { grid-area: num-dot; }
+.opr-add { grid-area: plus; }
+.opr-equals { grid-area: equals; }
