@@ -1,6 +1,12 @@
 /* ########## GLOBAL ######### */
 let txtHistory = '',
     txtCurr = '0';
+
+let operable = {
+  firstNum : '',
+  operation : '',
+  secondNum : '', 
+}
 /* ########## END OF GLOBAL ########*/
 function addition (num1, num2) {
   return num1 + num2
@@ -69,34 +75,42 @@ numDot.addEventListener('click', function(e){
   }
 })
 
-const addBtn = document.querySelector('.opr-add');
-addBtn.addEventListener('click', function(e){
-  txtHistory = txtCurr;
-  txtCurr = '0';
-  txtHistory += ` ${e.target.value}`;
-  displayHistory.textContent = txtHistory;
-})
+const mainOperations = document.querySelectorAll('.main');
+mainOperations.forEach(operation => operation.addEventListener('click', function(e){
+  operable.operation = e.target.value;
 
-const subBtn = document.querySelector('.opr-sub');
-subBtn.addEventListener('click', function(e){
-  txtHistory = txtCurr;
+  if (operable.firstNum === ''){
+    operable.firstNum = txtCurr;
+  } else {
+    operable.secondNum = txtCurr;
+    operable.firstNum = operate(operable.operation, parseInt(operable.firstNum), parseInt(operable.secondNum));
+  }
+  txtHistory = `${operable.firstNum} ${operable.operation}`
   txtCurr = '0';
-  txtHistory += ` ${e.target.value}`;
   displayHistory.textContent = txtHistory;
-})
+}));
 
-const divideBtn = document.querySelector('.opr-divide');
-divideBtn.addEventListener('click', function(e){
-  txtHistory = txtCurr;
-  txtCurr = '0';
-  txtHistory += ` ${e.target.value}`;
-  displayHistory.textContent = txtHistory;
-})
+// const subBtn = document.querySelector('.opr-sub');
+// subBtn.addEventListener('click', function(e){
+//   txtHistory = txtCurr;
+//   txtCurr = '0';
+//   txtHistory += ` ${e.target.value}`;
+//   displayHistory.textContent = txtHistory;
+// })
 
-const multiplyBtn = document.querySelector('.opr-multiply');
-multiplyBtn.addEventListener('click', function(e){
-  txtHistory = txtCurr;
-  txtCurr = '0';
-  txtHistory += ` ${e.target.value}`;
-  displayHistory.textContent = txtHistory;
-})
+// const divideBtn = document.querySelector('.opr-divide');
+// divideBtn.addEventListener('click', function(e){
+//   txtHistory = txtCurr;
+//   txtCurr = '0';
+//   txtHistory += ` ${e.target.value}`;
+//   displayHistory.textContent = txtHistory;
+// })
+
+// const multiplyBtn = document.querySelector('.opr-multiply');
+// multiplyBtn.addEventListener('click', function(e){
+//   txtHistory = txtCurr;
+//   txtCurr = '0';
+//   txtHistory += ` ${e.target.value}`;
+//   displayHistory.textContent = txtHistory;
+// })
+
